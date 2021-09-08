@@ -6,10 +6,10 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import se331.lab.rest.entity.Event;
+import se331.lab.rest.entity.EventDTO;
 import se331.lab.rest.entity.Organizer;
 import se331.lab.rest.repository.EventRepository;
 import se331.lab.rest.repository.OrganizerRepository;
-
 
 
 @Component
@@ -18,6 +18,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
     EventRepository eventRepository;
     @Autowired
     OrganizerRepository organizerRepository;
+
     @Override
     @Transactional//2.6 and 2.7
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
