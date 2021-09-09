@@ -2,6 +2,8 @@ package se331.lab.rest.entity;
 
 import lombok.*;
 
+import java.util.List;
+
 
 @Data
 @Builder
@@ -17,4 +19,5 @@ public class EventDTO {
     String time;
     Boolean petAllowed;
     EventOrganizerDTO organizer;
+    List<ParticipantIdNameTelDTO> participants;
 }
