@@ -68,10 +68,6 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .petAllowed(false)
                 .build());
         tempEvent.setOrganizer(org1);
-        tempEvent.getParticipants().add(p1);
-        tempEvent.getParticipants().add(p2);
-        tempEvent.getParticipants().add(p3);
-        System.out.println(tempEvent);
         org1.getOwnEvents().add(tempEvent);
         p1.getEventHistory().add(tempEvent);
         p2.getEventHistory().add(tempEvent);
@@ -103,7 +99,6 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .build());
         tempEvent.setOrganizer(org2);
         org2.getOwnEvents().add(tempEvent);
-        org1.getOwnEvents().add(tempEvent);
         p4.getEventHistory().add(tempEvent);
         p5.getEventHistory().add(tempEvent);
         p3.getEventHistory().add(tempEvent);
